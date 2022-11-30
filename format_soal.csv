@@ -1,0 +1,11 @@
+NO,SOAL,JENIS SOAL,JAWABAN A,JAWABAN B,JAWABAN C,JAWABAN D,JAWABAN E,KUNCI JAWABAN,HASTAG,TYPE SOAL,,,
+1,Kota Bandung berada di provinsi ?,E,Jawa Tengah,Jawa Barat,Jawa Timur,Sumatra Selatan,Sumatra Barat,B,"QC, Front Office",1,"1 = Essay
+2 = Benar Salah
+3 = Essay",,"E = Mudah
+M = Sedang/Medium
+S = Susah"
+2,Kota Bukit Tinggi berada di provinsi ?,E,Jawa Tengah,Jawa Barat,Jawa Timur,Sumatra Selatan,Sumatra Barat,E,"QC, Front Office",1,,,
+3,Manakah Pernyataan yang benar berikut ini ?,M,Saya Ke Jakarta Dengan Mobil,Saya Ke Jakarta Dengan mengendarai Mobil,,,,Jawaban,Front Office,2,,,
+4,Manakah Pernyataan yang benar berikut ini ?,M,Saya dan Ayah Mengendarai kuda jalan-jalan,Saya dan ayah menggunakan kuda untuk jalan-jalan,,,,Jawaban,Front Office,2,,,
+5,Jelaskan dengan singkat proses turun hujan,H,,,,,,Jawaban,QC,3,,,
+6,Jelaskan dengan singkat proses fotosintesis,H,,,,,,Jawaban,Developer,3,,,
