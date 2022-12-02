@@ -86,7 +86,7 @@
 									</div>
 									<div class="form-group">
 										<button class="btn btn-main btn-block btn-lg">Update Data</button>
-										<button class="btn btn-dark btn-block btn-lg" onclick="history.back()">Back</button>
+										<button type="button" class="btn btn-dark btn-block btn-lg" onclick="history.back()">Back</button>
 									</div>
 								</div>
 							</div>
