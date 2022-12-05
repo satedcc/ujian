@@ -333,6 +333,7 @@ class Peserta extends CI_Controller
     public function upload()
     {
         // GET LAST ID
+        error_reporting(0);
         $reg    = $this->m_reg->autonumber();
         $nourut = substr($reg->kodeTerbesar, 4, 6);
         $huruf = "EXAM";
