@@ -428,6 +428,8 @@ class Peserta extends CI_Controller
                         $this->session->set_flashdata('notif', 'Participant has been added');
                         $this->m_reg->save($data);
                     }
+                } else {
+                    exit();
                 }
             }
             // redirect('../admin/peserta/');
