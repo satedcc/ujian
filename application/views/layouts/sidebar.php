@@ -27,11 +27,11 @@
                                                                                     echo ' active';
                                                                                 } ?>"><i data-feather="clipboard"></i> Exam Type</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a href="<?= base_url('admin/test/') ?>" class="nav-link<?php if ($this->uri->segment('2') == 'test') {
                                                                                 echo ' active';
                                                                             } ?>"><i data-feather="award"></i> Test Result</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a href="<?= base_url('admin/required/') ?>" class="nav-link<?php if ($this->uri->segment('2') == 'required') {
                                                                                     echo ' active';

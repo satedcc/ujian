@@ -85,8 +85,8 @@ class Jadwal extends CI_Controller
     {
         $data["id_kategori"]        = $this->input->post('kategori');
         $data["nama_jadwal"]        = $this->input->post('title');
-        $data["mulai"]              = date("Y-m-d", strtotime(str_replace('/', '-', $this->input->post('mulai'))));
-        $data["selesai"]            = date("Y-m-d", strtotime(str_replace('/', '-', $this->input->post('selesai'))));
+        $data["mulai"]              = $this->input->post('mulai') . " " . $this->input->post('jam_mulai');
+        $data["selesai"]            = $this->input->post('selesai') . " " . $this->input->post('jam_selesai');
         $data["jumlah_peserta"]     = $this->input->post('jumlah');
         $data["soal_mudah   "]      = $this->input->post('mudah');
         $data["soal_medium"]        = $this->input->post('medium');
@@ -100,6 +100,7 @@ class Jadwal extends CI_Controller
         $data["status_jadwal"]      = $this->input->post('status_jadwal');
         $data["interval_img"]       = $this->input->post('interval');
         $data["durasi"]             = $this->input->post('durasi');
+        $data["random"]             = $this->input->post('random');
 
         $data["id_user"]            = $this->session->userdata('akun');
         if ($this->input->post('timer') == "S") {

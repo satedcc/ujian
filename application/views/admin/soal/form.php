@@ -153,12 +153,12 @@
                                     </div>
                                     <?php if (isset($row)) : ?>
                                         <?php if ($row->type_soal == "1") : ?>
-                                            <input type="text" <?php if ($row->type_soal != "1") echo "disabled" ?> required name="jawab_a" class="form-control ganda" placeholder="answer A" aria-describedby="basic-addon1" value="<?php if (isset($row)) echo $row->jawab_a ?>">
+                                            <input type="text" <?php if ($row->type_soal != "1") echo "disabled" ?> name="jawab_a" class="form-control ganda" placeholder="answer A" aria-describedby="basic-addon1" value="<?php if (isset($row)) echo $row->jawab_a ?>">
                                         <?php else : ?>
-                                            <input type="text" <?php if ($row->type_soal != "1") echo "disabled" ?> required name="jawab_a" class="form-control ganda" placeholder="answer A" aria-describedby="basic-addon1">
+                                            <input type="text" <?php if ($row->type_soal != "1") echo "disabled" ?> name="jawab_a" class="form-control ganda" placeholder="answer A" aria-describedby="basic-addon1">
                                         <?php endif; ?>
                                     <?php else : ?>
-                                        <input type="text" required name="jawab_a" class="form-control ganda" placeholder="answer A" aria-describedby="basic-addon1">
+                                        <input type="text" name="jawab_a" class="form-control ganda" placeholder="answer A" aria-describedby="basic-addon1">
                                     <?php endif; ?>
                                 </div>
                             </div>
@@ -169,9 +169,9 @@
                                     </div>
                                     <?php if (isset($row)) : ?>
                                         <?php if ($row->type_soal == "1") : ?>
-                                            <input type="text" <?php if ($row->type_soal != "1") echo "disabled" ?> required name="jawab_b" class="form-control ganda" placeholder="answer B" aria-describedby="basic-addon1" value="<?php echo $row->jawab_b ?>">
+                                            <input type="text" <?php if ($row->type_soal != "1") echo "disabled" ?> name="jawab_b" class="form-control ganda" placeholder="answer B" aria-describedby="basic-addon1" value="<?php echo $row->jawab_b ?>">
                                         <?php else : ?>
-                                            <input type="text" <?php if ($row->type_soal != "1") echo "disabled" ?> required name="jawab_b" class="form-control ganda" placeholder="answer B" aria-describedby="basic-addon1">
+                                            <input type="text" <?php if ($row->type_soal != "1") echo "disabled" ?> name="jawab_b" class="form-control ganda" placeholder="answer B" aria-describedby="basic-addon1">
                                         <?php endif; ?>
                                     <?php else : ?>
                                         <input type="text" name="jawab_b" class="form-control ganda" placeholder="answer B" aria-describedby="basic-addon1">
@@ -184,9 +184,9 @@
                                         <span class="input-group-text" id="basic-addon1">C</span>
                                     </div>
                                     <?php if (isset($row)) : ?>
-                                        <input type="text" <?php if ($row->type_soal != "1") echo "disabled" ?> required name="jawab_c" class="form-control ganda" placeholder="answer C" aria-describedby="basic-addon1" value="<?php echo $row->jawab_c ?>">
+                                        <input type="text" <?php if ($row->type_soal != "1") echo "disabled" ?> name="jawab_c" class="form-control ganda" placeholder="answer C" aria-describedby="basic-addon1" value="<?php echo $row->jawab_c ?>">
                                     <?php else : ?>
-                                        <input type="text" required name="jawab_c" class="form-control ganda" placeholder="answer C" aria-describedby="basic-addon1">
+                                        <input type="text" name="jawab_c" class="form-control ganda" placeholder="answer C" aria-describedby="basic-addon1">
                                     <?php endif; ?>
                                 </div>
                             </div>
@@ -196,9 +196,9 @@
                                         <span class="input-group-text" id="basic-addon1">D</span>
                                     </div>
                                     <?php if (isset($row)) : ?>
-                                        <input type="text" <?php if ($row->type_soal != "1") echo "disabled" ?> required name="jawab_d" class="form-control ganda" placeholder="answer D" aria-describedby="basic-addon1" value="<?php echo $row->jawab_d ?>">
+                                        <input type="text" <?php if ($row->type_soal != "1") echo "disabled" ?> name="jawab_d" class="form-control ganda" placeholder="answer D" aria-describedby="basic-addon1" value="<?php echo $row->jawab_d ?>">
                                     <?php else : ?>
-                                        <input type="text" required name="jawab_d" class="form-control ganda" placeholder="answer D" aria-describedby="basic-addon1">
+                                        <input type="text" name="jawab_d" class="form-control ganda" placeholder="answer D" aria-describedby="basic-addon1">
                                     <?php endif; ?>
                                 </div>
                             </div>
@@ -208,9 +208,9 @@
                                         <span class="input-group-text" id="basic-addon1">E</span>
                                     </div>
                                     <?php if (isset($row)) : ?>
-                                        <input type="text" <?php if ($row->type_soal != "1") echo "disabled" ?> required name="jawab_e" class="form-control ganda" placeholder="answer E" aria-describedby="basic-addon1" value="<?php echo $row->jawab_e ?>">
+                                        <input type="text" <?php if ($row->type_soal != "1") echo "disabled" ?> name="jawab_e" class="form-control ganda" placeholder="answer E" aria-describedby="basic-addon1" value="<?php echo $row->jawab_e ?>">
                                     <?php else : ?>
-                                        <input type="text" required name="jawab_e" class="form-control ganda" placeholder="answer E" aria-describedby="basic-addon1">
+                                        <input type="text" name="jawab_e" class="form-control ganda" placeholder="answer E" aria-describedby="basic-addon1">
                                     <?php endif; ?>
                                 </div>
                             </div>
@@ -229,7 +229,7 @@
                                             <input type="text" required <?php if ($row->type_soal != "2") echo "disabled" ?> name="jawab_a" class="form-control truefalse" placeholder="Statement A" aria-describedby="basic-addon1">
                                         <?php endif; ?>
                                     <?php else : ?>
-                                        <input type="text" required disabled name="jawab_a" class="form-control truefalse" placeholder="Statement A" aria-describedby="basic-addon1">
+                                        <input type="text" disabled name="jawab_a" class="form-control truefalse" placeholder="Statement A" aria-describedby="basic-addon1">
                                     <?php endif; ?>
                                 </div>
                             </div>
@@ -245,7 +245,7 @@
                                             <input type="text" required <?php if ($row->type_soal != "2") echo "disabled" ?> name="jawab_b" class="form-control truefalse" placeholder="Statement B" aria-describedby="basic-addon1">
                                         <?php endif; ?>
                                     <?php else : ?>
-                                        <input type="text" required disabled name="jawab_b" class="form-control truefalse" placeholder="Statement B" aria-describedby="basic-addon1">
+                                        <input type="text" disabled name="jawab_b" class="form-control truefalse" placeholder="Statement B" aria-describedby="basic-addon1">
                                     <?php endif; ?>
                                 </div>
                             </div>

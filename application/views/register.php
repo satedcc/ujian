@@ -1,5 +1,10 @@
 <?php
-$urutan = (int) substr($reg->kodeTerbesar, 5, 6);
+if (isset($reg->kodeTerbesar)) {
+    $kode = $reg->kodeTerbesar;
+} else {
+    $kode = 0;
+}
+$urutan = (int) substr($kode, 5, 6);
 $urutan++;
 $huruf  = "EXAM";
 $reg    = $huruf . sprintf("%06s", $urutan);

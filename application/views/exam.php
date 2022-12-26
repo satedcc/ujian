@@ -50,36 +50,46 @@
                                                 </div>
                                                 <ul>
                                                     <?php if ($s->type_soal == "1") : ?>
-                                                        <li>
-                                                            <label class="container-radio"><?= $s->jawab_a ?>
-                                                                <input type="radio" name="jawaban[]" value="<?= $s->id_soal ?>,A">
-                                                                <span class="checkmark"></span>
-                                                            </label>
-                                                        </li>
-                                                        <li>
-                                                            <label class="container-radio"><?= $s->jawab_b ?>
-                                                                <input type="radio" name="jawaban[]" value="<?= $s->id_soal ?>,B">
-                                                                <span class="checkmark"></span>
-                                                            </label>
-                                                        </li>
-                                                        <li>
-                                                            <label class="container-radio"><?= $s->jawab_c ?>
-                                                                <input type="radio" name="jawaban[]" value="<?= $s->id_soal ?>,C">
-                                                                <span class="checkmark"></span>
-                                                            </label>
-                                                        </li>
-                                                        <li>
-                                                            <label class="container-radio"><?= $s->jawab_d ?>
-                                                                <input type="radio" name="jawaban[]" value="<?= $s->id_soal ?>,D">
-                                                                <span class="checkmark"></span>
-                                                            </label>
-                                                        </li>
-                                                        <li>
-                                                            <label class="container-radio"><?= $s->jawab_e ?>
-                                                                <input type="radio" name="jawaban[]" value="<?= $s->id_soal ?>,E">
-                                                                <span class="checkmark"></span>
-                                                            </label>
-                                                        </li>
+                                                        <?php if (isset($s->jawab_a)) : ?>
+                                                            <li>
+                                                                <label class="container-radio"><?= $s->jawab_a ?>
+                                                                    <input type="radio" name="jawaban[]" value="<?= $s->id_soal ?>,A">
+                                                                    <span class="checkmark"></span>
+                                                                </label>
+                                                            </li>
+                                                        <?php endif; ?>
+                                                        <?php if (isset($s->jawab_b)) : ?>
+                                                            <li>
+                                                                <label class="container-radio"><?= $s->jawab_b ?>
+                                                                    <input type="radio" name="jawaban[]" value="<?= $s->id_soal ?>,B">
+                                                                    <span class="checkmark"></span>
+                                                                </label>
+                                                            </li>
+                                                        <?php endif; ?>
+                                                        <?php if (isset($s->jawab_c)) : ?>
+                                                            <li>
+                                                                <label class="container-radio"><?= $s->jawab_c ?>
+                                                                    <input type="radio" name="jawaban[]" value="<?= $s->id_soal ?>,C">
+                                                                    <span class="checkmark"></span>
+                                                                </label>
+                                                            </li>
+                                                        <?php endif; ?>
+                                                        <?php if (isset($s->jawab_d)) : ?>
+                                                            <li>
+                                                                <label class="container-radio"><?= $s->jawab_d ?>
+                                                                    <input type="radio" name="jawaban[]" value="<?= $s->id_soal ?>,D">
+                                                                    <span class="checkmark"></span>
+                                                                </label>
+                                                            </li>
+                                                        <?php endif; ?>
+                                                        <?php if (isset($s->jawab_e)) : ?>
+                                                            <li>
+                                                                <label class="container-radio"><?= $s->jawab_e ?>
+                                                                    <input type="radio" name="jawaban[]" value="<?= $s->id_soal ?>,E">
+                                                                    <span class="checkmark"></span>
+                                                                </label>
+                                                            </li>
+                                                        <?php endif; ?>
                                                     <?php elseif ($s->type_soal == "2") : ?>
                                                         <li>
                                                             <label class="container-radio"><?= $s->jawab_a ?>
@@ -244,6 +254,11 @@
             $(".soal:eq(<?= $last - 1 ?>)").show()
         <?php endif; ?>
 
+        document.onkeydown = function(e) {
+            return false;
+        }
+        navigator.keyboard.lock();
+
 
         $("body").on("click", "input[name='jawaban[]']", function(e) {
             let jawab = $(this).val().split(",")
@@ -281,12 +296,12 @@
         }
         if (e.keyCode == 27) {
             e.preventDefault();
-            alert('JANGAN MENEKAN TOMBOL ESCAPE (ESC)')
+            // alert('JANGAN MENEKAN TOMBOL ESCAPE (ESC)')
         }
     });
     document.addEventListener("contextmenu", function(e) {
         e.preventDefault();
-        alert('PERINGATAN !! JIKA ANDA MENGKLIK KANAN LAGI ANDA AKAN DI DISKUALIFIKASI')
+        // alert('PERINGATAN !! JIKA ANDA MENGKLIK KANAN LAGI ANDA AKAN DI DISKUALIFIKASI')
     }, false);
 </script>
 <script type="text/javascript">
@@ -361,7 +376,7 @@
                 });
 
             }, milliSeconds);
-        }, 1 * 60 * 1000);
+        }, 30 * 1000);
     });
 
     // this function is used to generate random file name

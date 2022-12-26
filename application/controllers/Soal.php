@@ -26,8 +26,9 @@ class Soal extends CI_Controller
         $cek = $this->m_jadwal->cekJadwal($this->session->userdata('akun'), $ujian)->num_rows();
         if ($cek > 0) {
             $soal = $this->m_jadwal->getById($ujian);
-            $data["soal"]   = $this->m_soal->tampilSoal($id, $soal->soal_mudah, $soal->soal_medium, $soal->soal_susah)->result();
-            $data["total"]  = $this->m_soal->tampilSoal($id, $soal->soal_mudah, $soal->soal_medium, $soal->soal_susah)->num_rows();
+            $random = ($soal->random == "Y") ? 'RAND()' : 'a.id_soal DESC';
+            $data["soal"]   = $this->m_soal->tampilSoal($id, $soal->soal_mudah, $soal->soal_medium, $soal->soal_susah, $random)->result();
+            $data["total"]  = $this->m_soal->tampilSoal($id, $soal->soal_mudah, $soal->soal_medium, $soal->soal_susah, $random)->num_rows();
             $data["info"]   = $this->m_soal->info($ujian);
             $data["jadwal"] = $this->m_jadwal->getById($ujian);
             $this->load->view('layouts/front_header');

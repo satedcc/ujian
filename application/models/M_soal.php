@@ -16,7 +16,7 @@ class M_soal extends CI_Model
     {
         return $this->db->query("SELECT * FROM ex_ujian AS a LEFT JOIN ex_jadwal AS b ON a.id_ujian=b.id_kategori WHERE b.id_jadwal='$id'")->row();
     }
-    function tampilSoal($id, $e, $m, $h)
+    function tampilSoal($id, $e, $m, $h, $r)
     {
         // return $this->db->query("(SELECT * FROM ex_detail_soal AS a LEFT JOIN ex_soal AS b ON a.id_soal=b.id_soal LEFT JOIN ex_jadwal AS c ON a.id_ujian=c.id_kategori WHERE b.jenis_soal='E' AND a.id_ujian='$id' ORDER BY RAND() LIMIT $e) 
         // UNION 
@@ -24,11 +24,11 @@ class M_soal extends CI_Model
         // UNION 
         // (SELECT * FROM ex_detail_soal AS a LEFT JOIN ex_soal AS b ON a.id_soal=b.id_soal LEFT JOIN ex_jadwal AS c ON a.id_ujian=c.id_kategori WHERE b.jenis_soal='H' AND a.id_ujian='$id' ORDER BY RAND() LIMIT $h)");
 
-        return $this->db->query("(SELECT * FROM ex_detail_soal AS a LEFT JOIN ex_soal AS b ON a.id_soal=b.id_soal WHERE b.jenis_soal='E' AND a.id_ujian='$id' ORDER BY RAND() LIMIT $e)
+        return $this->db->query("(SELECT * FROM ex_detail_soal AS a LEFT JOIN ex_soal AS b ON a.id_soal=b.id_soal WHERE b.jenis_soal='E' AND a.id_ujian='$id' ORDER BY $r LIMIT $e)
                                 UNION 
-                                (SELECT * FROM ex_detail_soal AS a LEFT JOIN ex_soal AS b ON a.id_soal=b.id_soal WHERE b.jenis_soal='M' AND a.id_ujian='$id' ORDER BY RAND() LIMIT $m) 
+                                (SELECT * FROM ex_detail_soal AS a LEFT JOIN ex_soal AS b ON a.id_soal=b.id_soal WHERE b.jenis_soal='M' AND a.id_ujian='$id' ORDER BY $r LIMIT $m) 
                                 UNION 
-                                (SELECT * FROM ex_detail_soal AS a LEFT JOIN ex_soal AS b ON a.id_soal=b.id_soal WHERE b.jenis_soal='H' AND a.id_ujian='$id' ORDER BY RAND() LIMIT $h)");
+                                (SELECT * FROM ex_detail_soal AS a LEFT JOIN ex_soal AS b ON a.id_soal=b.id_soal WHERE b.jenis_soal='H' AND a.id_ujian='$id' ORDER BY $r LIMIT $h)");
     }
     public function save($data)
     {

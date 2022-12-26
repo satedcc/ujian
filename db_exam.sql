@@ -1,9 +1,9 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.2
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 18, 2022 at 06:39 AM
+-- Generation Time: Dec 20, 2022 at 02:43 AM
 -- Server version: 5.7.33
 -- PHP Version: 7.4.19
 
@@ -69,10 +69,12 @@ CREATE TABLE `ex_detail_jadwal` (
 --
 
 INSERT INTO `ex_detail_jadwal` (`id_detail_jadwal`, `id_regis`, `id_jadwal`, `status_partisipant`, `created_by`, `created_date`, `id_user`) VALUES
-(9, 100, 4, 'Y', 9, '2022-10-31 21:54:46', 9),
-(10, 100, 3, 'Y', 9, '2022-10-31 21:54:55', 9),
-(11, 100, 2, 'Y', 9, '2022-10-31 21:55:00', 9),
-(12, 100, 1, 'N', 9, '2022-10-31 21:55:06', 9);
+(1, 100, 1, 'Y', 9, '2022-11-30 00:05:44', 9),
+(2, 106, 1, 'Y', 9, '2022-11-30 00:05:44', 9),
+(3, 100, 2, 'Y', 9, '2022-11-30 00:06:26', 9),
+(4, 106, 2, 'Y', 9, '2022-11-30 00:06:26', 9),
+(5, 100, 3, 'Y', 9, '2022-11-30 01:00:45', 9),
+(6, 106, 3, 'Y', 9, '2022-11-30 01:00:45', 9);
 
 -- --------------------------------------------------------
 
@@ -111,66 +113,7 @@ INSERT INTO `ex_detail_soal` (`id_detail`, `id_ujian`, `id_soal`, `created_by`, 
 (16, 1, 11, 1, '2022-10-28 05:00:29'),
 (17, 1, 6, 1, '2022-10-28 05:00:29'),
 (18, 1, 53, 1, '2022-10-28 05:00:29'),
-(19, 1, 47, 1, '2022-10-28 05:00:29'),
-(20, 2, 15, 1, '2022-11-03 07:12:54'),
-(21, 2, 14, 1, '2022-11-03 07:12:54'),
-(22, 2, 9, 1, '2022-11-03 07:12:54'),
-(23, 2, 8, 1, '2022-11-03 07:12:54'),
-(24, 2, 4, 1, '2022-11-03 07:12:54'),
-(25, 2, 3, 1, '2022-11-03 07:12:54'),
-(26, 2, 42, 1, '2022-11-03 07:12:54'),
-(27, 2, 61, 1, '2022-11-03 07:12:54'),
-(28, 2, 59, 1, '2022-11-03 07:12:54'),
-(29, 2, 55, 1, '2022-11-03 07:12:54'),
-(30, 2, 58, 1, '2022-11-03 07:12:54'),
-(31, 2, 60, 1, '2022-11-03 07:12:54'),
-(32, 2, 54, 1, '2022-11-03 07:12:54'),
-(33, 2, 48, 1, '2022-11-03 07:12:54'),
-(34, 2, 41, 1, '2022-11-03 07:12:54'),
-(35, 2, 35, 1, '2022-11-03 07:12:54'),
-(36, 2, 29, 1, '2022-11-03 07:12:54'),
-(37, 2, 23, 1, '2022-11-03 07:12:54'),
-(38, 2, 17, 1, '2022-11-03 07:12:54'),
-(39, 2, 11, 1, '2022-11-03 07:12:54'),
-(40, 2, 6, 1, '2022-11-03 07:12:54'),
-(41, 2, 53, 1, '2022-11-03 07:12:54'),
-(42, 2, 47, 1, '2022-11-03 07:12:54'),
-(43, 2, 40, 1, '2022-11-03 07:12:54'),
-(44, 2, 34, 1, '2022-11-03 07:12:54'),
-(45, 2, 28, 1, '2022-11-03 07:12:54'),
-(46, 2, 22, 1, '2022-11-03 07:12:54'),
-(47, 2, 16, 1, '2022-11-03 07:12:54'),
-(48, 2, 10, 1, '2022-11-03 07:12:54'),
-(49, 2, 5, 1, '2022-11-03 07:12:54'),
-(50, 2, 49, 1, '2022-11-03 07:12:54'),
-(51, 2, 43, 1, '2022-11-03 07:12:54'),
-(52, 2, 36, 1, '2022-11-03 07:12:54'),
-(53, 2, 30, 1, '2022-11-03 07:12:54'),
-(54, 2, 24, 1, '2022-11-03 07:12:54'),
-(55, 2, 18, 1, '2022-11-03 07:12:54'),
-(56, 2, 12, 1, '2022-11-03 07:12:54'),
-(57, 2, 1, 1, '2022-11-03 07:12:54'),
-(58, 2, 50, 1, '2022-11-03 07:12:54'),
-(59, 2, 44, 1, '2022-11-03 07:12:54'),
-(60, 2, 37, 1, '2022-11-03 07:12:54'),
-(61, 2, 31, 1, '2022-11-03 07:12:54'),
-(62, 2, 25, 1, '2022-11-03 07:12:54'),
-(63, 2, 19, 1, '2022-11-03 07:12:54'),
-(64, 2, 13, 1, '2022-11-03 07:12:54'),
-(65, 2, 7, 1, '2022-11-03 07:12:54'),
-(66, 2, 2, 1, '2022-11-03 07:12:54'),
-(67, 2, 52, 1, '2022-11-03 07:12:54'),
-(68, 2, 51, 1, '2022-11-03 07:12:54'),
-(69, 2, 46, 1, '2022-11-03 07:12:54'),
-(70, 2, 45, 1, '2022-11-03 07:12:54'),
-(71, 2, 39, 1, '2022-11-03 07:12:54'),
-(72, 2, 38, 1, '2022-11-03 07:12:54'),
-(73, 2, 33, 1, '2022-11-03 07:12:54'),
-(74, 2, 32, 1, '2022-11-03 07:12:54'),
-(75, 2, 27, 1, '2022-11-03 07:12:54'),
-(76, 2, 26, 1, '2022-11-03 07:12:54'),
-(77, 2, 21, 1, '2022-11-03 07:12:54'),
-(78, 2, 20, 1, '2022-11-03 07:12:54');
+(19, 1, 47, 1, '2022-10-28 05:00:29');
 
 -- --------------------------------------------------------
 
@@ -260,44 +203,78 @@ INSERT INTO `ex_history_login` (`id_history`, `id_regis`, `time_login`, `status_
 (68, 100, '2022-11-01 23:43:54', 'success'),
 (69, 100, '2022-11-01 23:45:15', 'success'),
 (70, 100, '2022-11-02 00:04:30', 'success'),
-(71, 100, '2022-11-03 03:42:14', 'success'),
-(72, 100, '2022-11-03 04:00:05', 'success'),
-(73, 100, '2022-11-03 04:14:40', 'success'),
-(74, 100, '2022-11-03 04:15:24', 'success'),
-(75, 100, '2022-11-03 05:05:05', 'success'),
-(76, 100, '2022-11-03 06:13:43', 'success'),
-(77, 100, '2022-11-03 08:10:52', 'success'),
-(78, 100, '2022-11-03 08:11:41', 'success'),
-(79, 100, '2022-11-03 10:22:20', 'success'),
-(80, 100, '2022-11-04 05:25:36', 'success'),
-(81, 100, '2022-11-04 05:37:09', 'success'),
-(82, 100, '2022-11-07 15:36:36', 'success'),
-(83, 100, '2022-11-07 16:04:47', 'success'),
-(84, 100, '2022-11-08 00:16:40', 'success'),
-(85, 100, '2022-11-09 06:36:46', 'success'),
-(86, 100, '2022-11-10 01:16:23', 'success'),
-(87, 100, '2022-11-10 03:22:35', 'success'),
-(88, 100, '2022-11-10 03:26:24', 'success'),
-(89, 100, '2022-11-11 00:18:56', 'success'),
-(90, 100, '2022-11-11 00:45:32', 'failid'),
-(91, 100, '2022-11-11 00:45:41', 'success'),
-(92, 100, '2022-11-14 23:40:54', 'success'),
-(93, 100, '2022-11-17 23:34:51', 'success'),
-(94, 100, '2022-11-17 23:45:26', 'success'),
-(95, 100, '2022-11-18 01:11:28', 'success'),
-(96, 100, '2022-11-18 01:14:50', 'success'),
-(97, 100, '2022-11-18 01:21:15', 'success'),
-(98, 100, '2022-11-18 02:44:43', 'success'),
-(99, 100, '2022-11-18 03:03:08', 'success'),
-(100, 100, '2022-11-18 05:23:25', 'disabled'),
-(101, 100, '2022-11-18 05:23:28', 'disabled'),
-(102, 100, '2022-11-18 05:23:28', 'disabled'),
-(103, 100, '2022-11-18 05:23:29', 'disabled'),
-(104, 100, '2022-11-18 05:23:36', 'disabled'),
-(105, 100, '2022-11-17 22:23:59', 'activate'),
-(106, 100, '2022-11-18 05:24:04', 'failid'),
-(107, 100, '2022-11-18 05:24:12', 'success'),
-(108, 100, '2022-11-18 05:31:52', 'success');
+(71, 100, '2022-11-02 01:47:02', 'success'),
+(72, 100, '2022-11-02 01:49:34', 'success'),
+(73, 100, '2022-11-02 01:50:05', 'success'),
+(74, 100, '2022-11-02 01:52:51', 'success'),
+(75, 100, '2022-11-02 01:56:32', 'success'),
+(76, 100, '2022-11-02 01:57:13', 'success'),
+(77, 100, '2022-11-02 01:58:27', 'success'),
+(78, 100, '2022-11-02 02:00:38', 'success'),
+(79, 100, '2022-11-02 02:03:03', 'success'),
+(80, 100, '2022-11-02 02:03:57', 'success'),
+(81, 100, '2022-11-02 02:05:55', 'success'),
+(82, 100, '2022-11-02 02:07:12', 'success'),
+(83, 100, '2022-11-02 02:07:59', 'success'),
+(84, 100, '2022-11-02 02:10:04', 'success'),
+(85, 100, '2022-11-02 02:12:03', 'success'),
+(86, 100, '2022-11-02 02:31:08', 'success'),
+(87, 100, '2022-11-02 02:37:15', 'success'),
+(88, 100, '2022-11-02 03:00:10', 'success'),
+(89, 100, '2022-11-02 03:12:40', 'success'),
+(90, 100, '2022-11-02 03:12:56', 'success'),
+(91, 100, '2022-11-02 03:32:55', 'success'),
+(92, 100, '2022-11-02 03:33:29', 'success'),
+(93, 100, '2022-11-02 03:36:17', 'success'),
+(94, 100, '2022-11-02 03:37:39', 'success'),
+(95, 100, '2022-11-02 03:38:31', 'success'),
+(96, 100, '2022-11-02 03:38:52', 'success'),
+(97, 100, '2022-11-02 03:39:40', 'success'),
+(98, 100, '2022-11-02 03:40:25', 'success'),
+(99, 100, '2022-11-02 03:41:26', 'success'),
+(100, 100, '2022-11-02 03:42:02', 'success'),
+(101, 100, '2022-11-02 03:48:49', 'success'),
+(102, 100, '2022-11-02 03:49:25', 'success'),
+(103, 100, '2022-11-02 03:50:00', 'success'),
+(104, 100, '2022-11-02 03:50:38', 'success'),
+(105, 100, '2022-11-02 03:51:04', 'success'),
+(106, 100, '2022-11-02 03:53:32', 'success'),
+(107, 100, '2022-11-02 03:54:34', 'success'),
+(108, 100, '2022-11-02 03:55:33', 'success'),
+(109, 100, '2022-11-02 03:55:57', 'success'),
+(110, 100, '2022-11-02 03:56:33', 'success'),
+(111, 100, '2022-11-02 03:59:44', 'success'),
+(112, 100, '2022-11-02 04:19:27', 'success'),
+(113, 100, '2022-11-02 04:21:25', 'success'),
+(114, 100, '2022-11-02 04:26:09', 'success'),
+(115, 100, '2022-11-02 04:27:20', 'success'),
+(116, 100, '2022-11-02 04:28:52', 'success'),
+(117, 100, '2022-11-02 04:29:40', 'success'),
+(118, 100, '2022-11-02 04:30:05', 'success'),
+(119, 100, '2022-11-02 04:30:25', 'success'),
+(120, 100, '2022-11-02 04:35:54', 'success'),
+(121, 100, '2022-11-02 04:36:56', 'success'),
+(122, 100, '2022-11-02 04:37:34', 'success'),
+(123, 100, '2022-11-02 04:39:33', 'success'),
+(124, 100, '2022-11-02 04:41:50', 'success'),
+(125, 100, '2022-11-02 04:42:46', 'success'),
+(126, 100, '2022-11-07 13:26:24', 'success'),
+(127, 100, '2022-11-08 00:12:02', 'success'),
+(128, 100, '2022-11-08 00:15:11', 'success'),
+(129, 100, '2022-11-08 00:36:25', 'success'),
+(130, 100, '2022-11-08 00:37:01', 'success'),
+(131, 100, '2022-11-08 00:39:47', 'success'),
+(132, 100, '2022-11-09 23:40:24', 'success'),
+(133, 100, '2022-11-25 05:35:21', 'success'),
+(134, 100, '2022-11-25 05:37:18', 'success'),
+(135, 100, '2022-11-29 23:06:35', 'success'),
+(136, 100, '2022-11-30 00:00:52', 'success'),
+(137, 100, '2022-11-30 01:54:33', 'success'),
+(138, 100, '2022-11-30 07:04:52', 'success'),
+(139, 100, '2022-12-02 00:01:13', 'success'),
+(140, 100, '2022-12-09 01:20:23', 'success'),
+(141, 100, '2022-12-12 00:27:38', 'success'),
+(142, 100, '2022-12-13 02:40:00', 'success');
 
 -- --------------------------------------------------------
 
@@ -363,10 +340,9 @@ CREATE TABLE `ex_jadwal` (
 --
 
 INSERT INTO `ex_jadwal` (`id_jadwal`, `kode_jadwal`, `id_kategori`, `nama_jadwal`, `mulai`, `selesai`, `jumlah_peserta`, `soal_mudah`, `soal_medium`, `soal_susah`, `nilai_benar`, `nilai_salah`, `total_ganda`, `total_pernyataan`, `total_essay`, `record`, `update_date`, `jenis_waktu`, `timer`, `set_ganda`, `set_benar`, `set_esay`, `score`, `status_jadwal`, `id_user`, `interval_img`, `durasi`, `created_date`) VALUES
-(1, 'QCT000001', 1, 'Penerimaan QC Batch 1', '2022-11-01 00:00:00', '2022-11-30 00:00:00', 100, 3, 6, 10, 4, 1, 0, 0, 0, 'aktif', '2022-11-01 08:06:24', 'S', NULL, '15', '20', '25', 200, 'actived', 9, 100000, '100', '2022-10-28 05:05:50'),
-(2, 'QCT000002', 2, 'Semulasi Dua Penerimaan QC Developer System', '2022-10-31 00:00:00', '2022-11-30 00:00:00', 4, 23, 18, 18, 4, 1, 0, 0, 0, 'aktif', '2022-11-03 07:13:29', 'S', NULL, '15', '15', '15', 200, 'actived', 9, 50, '50', '2022-10-31 01:14:20'),
-(3, 'QCT000003', 1, 'Semulasi Dua Penerimaan QC Developer System BATCH 2', '2022-10-31 01:13:43', '2022-12-31 05:00:54', 4, 3, 6, 10, 4, 1, 0, 0, 0, 'aktif', '0000-00-00 00:00:00', 'T', '01:30', NULL, NULL, NULL, 200, 'actived', 9, 50, '50', '2022-10-31 01:14:20'),
-(4, 'QCT000004', 1, 'Semulasi Dua Penerimaan QC Developer System BATCH 3', '2022-10-31 01:13:43', '2022-12-31 05:00:54', 4, 3, 6, 10, 4, 1, 0, 0, 0, 'aktif', '0000-00-00 00:00:00', 'T', '01:30', NULL, NULL, NULL, 200, 'actived', 9, 50, '50', '2022-10-31 01:14:20');
+(1, 'QCT000001', 1, 'Sumulasi Penerimaan QC 1', '2022-11-30 00:00:00', '2022-12-31 00:00:00', 10, 3, 6, 10, 4, 1, 0, 0, 0, 'aktif', '2022-12-09 02:20:17', 'T', '00:50', NULL, NULL, NULL, 100, 'actived', 9, 100, '8', '2022-11-30 00:05:39'),
+(2, 'QCT000002', 1, 'Simulasi Penerimaan QC 2', '2022-11-30 00:00:00', '2022-12-31 00:00:00', 5, 3, 6, 10, 4, 1, 0, 0, 0, 'aktif', '2022-12-09 02:20:08', 'T', '03:45', NULL, NULL, NULL, 100, 'actived', 9, 100, '8', '2022-11-30 00:06:21'),
+(3, 'QCT000003', 1, 'Simulasi Soal Timer', '2022-11-30 00:00:00', '2022-12-30 00:00:00', 5, 3, 6, 10, 4, 1, 0, 0, 0, 'aktif', '2022-12-09 02:19:59', 'S', '', '480', '480', '480', 100, 'actived', 9, 100, '8', '2022-11-30 01:00:39');
 
 -- --------------------------------------------------------
 
@@ -400,6 +376,20 @@ CREATE TABLE `ex_log_email` (
   `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `ex_log_email`
+--
+
+INSERT INTO `ex_log_email` (`id_log`, `email_log`, `log_name`, `status`, `email_send`, `created_date`) VALUES
+(4, 'satedcc@gmail.com', 'Registered Successfully', 'Success', 'Yes', '2022-10-04 17:56:21'),
+(5, 'satedcc@gmail.com', 'Validation OTP fail', 'fail', 'No', '2022-10-04 17:56:43'),
+(6, 'satedcc@gmail.com', 'Validation OTP fail', 'fail', 'No', '2022-10-04 17:56:47'),
+(7, 'satedcc@gmail.com', 'Validation OTP Success', 'Success', 'Yes', '2022-10-04 17:57:22'),
+(8, 'satedcc@gmail.com', 'Email has been registered', 'Fail', 'No', '2022-10-31 18:40:59'),
+(9, 'satedcc@gmail.com', 'Email has been registered', 'Fail', 'No', '2022-10-31 18:42:27'),
+(10, 'satedcc@gmail.comCC', '>Name can only be letter', 'Fail', 'No', '2022-10-31 18:42:39'),
+(11, 'satedcc@gmail.com', 'Email has been registered', 'Fail', 'No', '2022-10-31 18:46:48');
+
 -- --------------------------------------------------------
 
 --
@@ -414,6 +404,13 @@ CREATE TABLE `ex_log_img` (
   `type_file` enum('img','video') NOT NULL,
   `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `ex_log_img`
+--
+
+INSERT INTO `ex_log_img` (`id_img`, `id_regis`, `name_log`, `file_img`, `type_file`, `created_date`) VALUES
+(1, 100, '100-QCT000001-RecordRTC-20221112-3sq66xkriwo.webm', 'http://localhost/exam_new/dir/record/100-QCT000001-RecordRTC-20221112-3sq66xkriwo.webm', 'video', '2022-12-12 01:31:51');
 
 -- --------------------------------------------------------
 
@@ -470,10 +467,7 @@ INSERT INTO `ex_patpel` (`id_patpel`, `id_ujian`, `id_user`, `created_date`) VAL
 (55, 4, 27, '2022-10-06 07:17:09'),
 (56, 4, 28, '2022-10-06 07:17:09'),
 (57, 1, 8, '2022-10-28 04:59:36'),
-(58, 1, 9, '2022-10-28 04:59:36'),
-(59, 2, 7, '2022-11-03 07:12:42'),
-(60, 2, 8, '2022-11-03 07:12:42'),
-(61, 2, 9, '2022-11-03 07:12:42');
+(58, 1, 9, '2022-10-28 04:59:36');
 
 -- --------------------------------------------------------
 
@@ -542,8 +536,18 @@ CREATE TABLE `ex_register` (
 --
 
 INSERT INTO `ex_register` (`id_regis`, `id_qua`, `no_regist`, `nik`, `nama_lengkap`, `email_peserta`, `password`, `nomor_peserta`, `alamat_peserta`, `tempat_lhr`, `tgl_lahir`, `jk`, `status_peserta`, `avaliable`, `file_photo`, `last_login`, `failid`, `created_date`, `update_date`, `otp`, `id_user`, `token`, `login_session`, `soft_delete`) VALUES
-(100, 4, 'EXAM000012', '7471000918881991', 'Satria Adi Pradana', 'satedcc@gmail.com', 'b07ea45a23d2d585e8476df214cf605a', '087843993267', 'BTN 1 Blok M No. 21', 'Makassar', '2022-04-09', 'P', 1, 'N', '20221027032109-satria_adipradan_sate.jpeg', '2022-11-18 13:31:52', 1, '2022-10-05 01:56:10', '0000-00-00 00:00:00', '196352', 9, '', '', 0),
-(106, 2, 'EXAM000019', '7471082704870011', 'Jhon Doe', 'jhon_one@gmail.com', '734a263c4098c25c68a4531c23042173', '08118899983', 'Jalan Pemuda Harapan Baru No.56 Samping SPBU Banteng', 'Jakarta', '2008-09-12', 'L', 0, 'N', '', '0000-00-00 00:00:00', 0, '2022-10-06 07:04:41', '0000-00-00 00:00:00', '', 9, '', '', 0);
+(100, 4, 'EXAM000012', '7471000918881991', 'Satria Adi Pradana', 'satedcc@gmail.com', 'b07ea45a23d2d585e8476df214cf605a', '087843993267', 'BTN 1 Blok M No. 21', 'Makassar', '2022-04-09', 'P', 1, 'N', '20221027032109-satria_adipradan_sate.jpeg', '2022-12-13 10:40:00', 2, '2022-10-05 01:56:10', '0000-00-00 00:00:00', '196352', 9, '', '', 0),
+(106, 2, 'EXAM000019', '7471082704870011', 'Jhon Doe', 'jhon_one@gmail.com', '734a263c4098c25c68a4531c23042173', '08118899983', 'Jalan Pemuda Harapan Baru No.56 Samping SPBU Banteng', 'Jakarta', '2008-09-12', 'L', 0, 'N', '', '0000-00-00 00:00:00', 0, '2022-10-06 07:04:41', '0000-00-00 00:00:00', '', 9, '', '', 0),
+(317, 3, 'EXAM000020', '179202217', 'Import Partisipan TujuhBelas', '179202217_DEV@gmail.com', 'a5291d75556b4923f7a53491374fb7c6', '08179202217', 'Alamat Rumah Import Partisipan TujuhBelas DEV Jakarta 2008-09-12', 'Jakarta', '2008-09-12', 'L', 0, 'N', '', '0000-00-00 00:00:00', 0, '2022-12-09 01:25:49', '0000-00-00 00:00:00', '', 9, '', '', 0),
+(318, 3, 'EXAM000021', '179202218', 'Import Partisipan DelapamBelas', '179202218_DEV@gmail.com', 'a5291d75556b4923f7a53491374fb7c6', '08179202218', 'Alamat Rumah Import Partisipan DelapamBelas DEV Bandung 2008-09-13', 'Bandung', '2008-09-13', 'P', 0, 'N', '', '0000-00-00 00:00:00', 0, '2022-12-09 01:25:49', '0000-00-00 00:00:00', '', 9, '', '', 0),
+(319, 3, 'EXAM000022', '179202219', 'Import Partisipan SembilanBelas', '179202219_DEV@gmail.com', 'a5291d75556b4923f7a53491374fb7c6', '08179202219', 'Alamat Rumah Import Partisipan SembilanBelas DEV Tangerang Selatan 2008-09-14', 'Tangerang Selatan', '2008-09-14', 'P', 0, 'N', '', '0000-00-00 00:00:00', 0, '2022-12-09 01:25:49', '0000-00-00 00:00:00', '', 9, '', '', 0),
+(320, 3, 'EXAM000023', '179202220', 'Import Partisipan DuaNol', '179202220_DEV@gmail.com', 'a5291d75556b4923f7a53491374fb7c6', '08179202220', 'Alamat Rumah Import Partisipan DuaNol DEV Tegal 2008-09-15', 'Tegal', '2008-09-15', 'P', 0, 'N', '', '0000-00-00 00:00:00', 0, '2022-12-09 01:25:49', '0000-00-00 00:00:00', '', 9, '', '', 0),
+(321, 3, 'EXAM000024', '179202221', 'Import Partisipan DuaSatu', '179202221_DEV@gmail.com', 'a5291d75556b4923f7a53491374fb7c6', '08179202221', 'Alamat Rumah Import Partisipan DuaSatu DEV Brebes 2008-09-16', 'Brebes', '2008-09-16', 'L', 0, 'N', '', '0000-00-00 00:00:00', 0, '2022-12-09 01:25:49', '0000-00-00 00:00:00', '', 9, '', '', 0),
+(322, 3, 'EXAM000025', '179202222', 'Import Partisipan DuaDua', '179202222_DEV@gmail.com', 'a5291d75556b4923f7a53491374fb7c6', '08179202222', 'Alamat Rumah Import Partisipan DuaDua DEV Bali 2008-09-17', 'Bali', '2008-09-17', 'L', 0, 'N', '', '0000-00-00 00:00:00', 0, '2022-12-09 01:25:49', '0000-00-00 00:00:00', '', 9, '', '', 0),
+(323, 3, 'EXAM000026', '179202223', 'Import Partisipan DuaTiga', '179202223_DEV@gmail.com', 'a5291d75556b4923f7a53491374fb7c6', '08179202223', 'Alamat Rumah Import Partisipan DuaTiga DEV Pemalang 2008-09-18', 'Pemalang', '2008-09-18', 'L', 0, 'N', '', '0000-00-00 00:00:00', 0, '2022-12-09 01:25:49', '0000-00-00 00:00:00', '', 9, '', '', 0),
+(324, 3, 'EXAM000027', '179202224', 'Import Partisipan DuaEmpat', '179202224_DEV@gmail.com', 'a5291d75556b4923f7a53491374fb7c6', '08179202224', 'Alamat Rumah Import Partisipan DuaEmpat DEV Pamekasan 2008-09-19', 'Pamekasan', '2008-09-19', 'P', 0, 'N', '', '0000-00-00 00:00:00', 0, '2022-12-09 01:25:49', '0000-00-00 00:00:00', '', 9, '', '', 0),
+(325, 3, 'EXAM000028', '179202225', 'Import Partisipan DuaLima', '179202225_DEV@gmail.com', 'a5291d75556b4923f7a53491374fb7c6', '08179202225', 'Alamat Rumah Import Partisipan DuaLima DEV Pontianak 2008-09-20', 'Pontianak', '2008-09-20', 'L', 0, 'N', '', '0000-00-00 00:00:00', 0, '2022-12-09 01:25:49', '0000-00-00 00:00:00', '', 9, '', '', 0),
+(326, 3, 'EXAM000029', '179202226', 'Import Partisipan DuaEnam', '179202226_DEV@gmail.com', 'a5291d75556b4923f7a53491374fb7c6', '08179202226', 'Alamat Rumah Import Partisipan DuaEnam DEV Makasar 2008-09-21', 'Makasar', '2008-09-21', 'L', 0, 'N', '', '0000-00-00 00:00:00', 0, '2022-12-09 01:25:49', '0000-00-00 00:00:00', '', 9, '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -661,7 +665,7 @@ INSERT INTO `ex_soal` (`id_soal`, `type_soal`, `soal`, `jenis_media`, `media_fil
 (46, 2, '<p>Manakah Pernyataan yang benar berikut ini ?</p>', '', '', '', 'M', 'aktif', 0, 0, '2022-10-10 07:52:09', '0000-00-00 00:00:00', 'Saya dan ayah menggunakan kuda untuk jalan-jalan', 'Saya dan Ayah Mengendarai kuda jalan-jalan', NULL, NULL, NULL, 'Jawaban', 'Front Office', 0, 9),
 (47, 3, '<p>Jelaskan dengan singkat proses turun hujan</p>', '', '', '', 'H', 'aktif', 0, 0, '2022-10-10 07:52:09', '0000-00-00 00:00:00', NULL, NULL, NULL, NULL, NULL, 'Jawaban', 'QC', 0, 9),
 (48, 3, '<p>Jelaskan dengan singkat proses fotosintesis</p>', '', '', '', 'H', 'aktif', 0, 0, '2022-10-10 07:52:09', '0000-00-00 00:00:00', NULL, NULL, NULL, NULL, NULL, 'Jawaban', 'Developer', 0, 9),
-(49, 1, '<p>Kota Bandung berada di provinsi ?</p>', '', '', '', 'E', 'aktif', 0, 0, '2022-10-10 07:56:14', '0000-00-00 00:00:00', 'Jawa Barat', 'Jawa Tengah', 'Jawa Timur', 'Sumatra Selatan', 'Sumatra Barat', 'B', 'QC, Front Office', 0, 9),
+(49, 1, '<p>Kota Bandung berada di provinsi ?</p>\r\n', '', '', '100%,100%', 'E', 'aktif', 22, 22, '2022-10-10 07:56:14', '0000-00-00 00:00:00', 'Jawa Barat', 'Jawa Tengah', 'Jawa Timur', 'Sumatra Selatan', 'Sumatra Barat', 'Bdsadsad', 'QC, Front Office', 0, 9),
 (50, 1, '<p>Kota Bukit Tinggi berada di provinsi ?</p>', '', '', '', 'E', 'aktif', 0, 0, '2022-10-10 07:56:14', '0000-00-00 00:00:00', 'Jawa Barat', 'Jawa Tengah', 'Jawa Timur', 'Sumatra Selatan', 'Sumatra Barat', 'E', 'QC, Front Office', 0, 9),
 (51, 2, '<p>Manakah Pernyataan yang benar berikut ini ?</p>', '', '', '', 'M', 'aktif', 0, 0, '2022-10-10 07:56:14', '0000-00-00 00:00:00', 'Saya Ke Jakarta Dengan mengendarai Mobil', 'Saya Ke Jakarta Dengan Mobil', NULL, NULL, NULL, 'Jawaban', 'Front Office', 0, 9),
 (52, 2, '<p>Manakah Pernyataan yang benar berikut ini ?</p>', '', '', '', 'M', 'aktif', 0, 0, '2022-10-10 07:56:14', '0000-00-00 00:00:00', 'Saya dan ayah menggunakan kuda untuk jalan-jalan', 'Saya dan Ayah Mengendarai kuda jalan-jalan', NULL, NULL, NULL, 'Jawaban', 'Front Office', 0, 9),
@@ -695,8 +699,7 @@ CREATE TABLE `ex_ujian` (
 --
 
 INSERT INTO `ex_ujian` (`id_ujian`, `nama_ujian`, `jumlah_soal`, `durasi`, `status_ujian`, `update_by`, `id_user`, `created_date`) VALUES
-(1, 'Simulasi Satu', NULL, '', 'Actived', '0000-00-00 00:00:00', 9, '2022-10-28 04:59:36'),
-(2, 'Simulasi Dua', NULL, '', 'Actived', '0000-00-00 00:00:00', 9, '2022-11-03 07:12:42');
+(1, 'Simulasi Satu', NULL, '', 'Actived', '0000-00-00 00:00:00', 9, '2022-10-28 04:59:36');
 
 -- --------------------------------------------------------
 
@@ -726,7 +729,7 @@ CREATE TABLE `ex_users` (
 INSERT INTO `ex_users` (`id_user`, `email`, `password`, `nama_lengkap`, `telp`, `status_user`, `level_user`, `created_date`, `update_date`, `last_login`, `otp_user`, `soft_delete`) VALUES
 (7, 'admin@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 'Satria Adipradana', '082188293232', 'aktif', 'superadmin', '2022-09-15 12:48:12', '0000-00-00 00:00:00', '2022-10-26 08:29:00', '534281', 0),
 (8, 'user@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 'Muhammad Irsan', '0811882982', 'aktif', 'user', '2022-09-16 07:36:21', '0000-00-00 00:00:00', '2022-09-28 11:26:42', '', 0),
-(9, 'satedcc@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 'Bambang Kusuma', '0811892928', 'aktif', 'superadmin', '2022-09-16 08:06:50', '0000-00-00 00:00:00', '2022-11-18 13:23:55', '475166', 0),
+(9, 'satedcc@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 'Bambang Kusuma', '0811892928', 'aktif', 'superadmin', '2022-09-16 08:06:50', '0000-00-00 00:00:00', '2022-12-13 10:40:11', '475166', 0),
 (13, 'edituser@asuransiastra.com', '863fda7bbe28e38761934ad4d0b4c77e', 'edituser', '08180000000', 'aktif', 'superadmin', '2022-09-27 13:09:11', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', 0),
 (14, 'publish@asuransiastra.com', '5f909b713a7c0d5183592fccc53a47e3', 'publish', '08180000000', 'disabled', 'user', '2022-09-27 13:13:51', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', 0),
 (15, 'activeuser@asuransiastra.com', '00afcccc09012a93d8042a808251f6e8', 'activeuser', '08180000000', 'aktif', 'user', '2022-09-27 13:16:10', '0000-00-00 00:00:00', '2022-09-27 20:54:04', '', 0),
@@ -867,19 +870,19 @@ ALTER TABLE `ex_detail_batch`
 -- AUTO_INCREMENT for table `ex_detail_jadwal`
 --
 ALTER TABLE `ex_detail_jadwal`
-  MODIFY `id_detail_jadwal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_detail_jadwal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `ex_detail_soal`
 --
 ALTER TABLE `ex_detail_soal`
-  MODIFY `id_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+  MODIFY `id_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `ex_history_login`
 --
 ALTER TABLE `ex_history_login`
-  MODIFY `id_history` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
+  MODIFY `id_history` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=143;
 
 --
 -- AUTO_INCREMENT for table `ex_informasi`
@@ -891,7 +894,7 @@ ALTER TABLE `ex_informasi`
 -- AUTO_INCREMENT for table `ex_jadwal`
 --
 ALTER TABLE `ex_jadwal`
-  MODIFY `id_jadwal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_jadwal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `ex_jawaban`
@@ -903,19 +906,19 @@ ALTER TABLE `ex_jawaban`
 -- AUTO_INCREMENT for table `ex_log_email`
 --
 ALTER TABLE `ex_log_email`
-  MODIFY `id_log` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_log` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `ex_log_img`
 --
 ALTER TABLE `ex_log_img`
-  MODIFY `id_img` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_img` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `ex_patpel`
 --
 ALTER TABLE `ex_patpel`
-  MODIFY `id_patpel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `id_patpel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
 -- AUTO_INCREMENT for table `ex_qualified`
@@ -927,7 +930,7 @@ ALTER TABLE `ex_qualified`
 -- AUTO_INCREMENT for table `ex_register`
 --
 ALTER TABLE `ex_register`
-  MODIFY `id_regis` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
+  MODIFY `id_regis` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=327;
 
 --
 -- AUTO_INCREMENT for table `ex_setting`
@@ -945,7 +948,7 @@ ALTER TABLE `ex_soal`
 -- AUTO_INCREMENT for table `ex_ujian`
 --
 ALTER TABLE `ex_ujian`
-  MODIFY `id_ujian` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_ujian` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `ex_users`

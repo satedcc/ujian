@@ -104,7 +104,9 @@
 		});
 		$('#date').datepicker({
 			dateFormat: "dd/mm/yy",
-			maxDate: new Date(),
+			changeMonth: true,
+			changeYear: true,
+			yearRange: "1950:2022"
 		});
 	});
 </script>

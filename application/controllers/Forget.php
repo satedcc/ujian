@@ -59,14 +59,23 @@ class Forget extends CI_Controller
     }
     public function resetpassword()
     {
+        $pass_status = strongPassword($this->input->post('password'));
         $cek =  $this->m_reg->cekOtp($this->input->post('otp'), $this->input->post('email'));
         if ($cek > 0) {
-            $d = $this->m_reg->getByOtp($this->input->post('otp'));
-            $data['password']   = md5(md5($this->input->post('password')));
-            $this->m_reg->update($data, $d->id_regis);
-            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Reset password successful</div>');
-            email_log($this->input->post('email'), 'Reset password successful', 'Success', 'Yes');
-            redirect('/');
+            if ($pass_status == "strong") {
+                $d                  = $this->m_reg->getByOtp($this->input->post('otp'));
+                $data['password']   = md5(md5($this->input->post('password')));
+                $this->m_reg->update($data, $d->id_regis);
+                $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Reset password successful</div>');
+                email_log($this->input->post('email'), 'Reset password successful', 'Success', 'Yes');
+                redirect('/');
+            } else {
+                $data['otp'] = $this->input->post('otp');
+                $data['email'] = $this->input->post('email');
+                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Password must have uppercase, lowercase and numbers</div>');
+                email_log($this->input->post('email'), 'Password must have uppercase, lowercase and numbers', 'Fail', 'No');
+                $this->load->view('newpass', $data);
+            }
         } else {
             $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Invalid for register</div>');
             email_log($this->input->post('email'), 'Invalid for register', 'Fail', 'No');

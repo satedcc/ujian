@@ -46,13 +46,24 @@
                 cache: false,
                 processData: false,
                 beforeSend: function() {
-
+                    $(".btn-primary").prop("disabled", true);
+                    $(".btn-primary").html(`<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span><span class="sr-only">Loading...</span>`)
                 },
                 success: function(data) {
-                    if (data) {
-                        $(".message-error").html(`<div class="alert alert-danger">` + data + `</div>`)
-                    } else {
-                        window.location.href = '<?= base_url('admin/peserta/') ?>';
+                    $(".btn-primary").prop("disabled", false);
+                    $(".btn-primary").html(`Import Now`);
+                    // if (data) {
+                    //     $(".message-error").html(`<div class="alert alert-danger">` + data + `</div>`)
+                    // } else {
+                    //     window.location.href = '<?= base_url('admin/peserta/') ?>';
+                    // }
+
+                    var x = data.split(",");
+                    if (x[1] == "0") {
+                        $(".message-error").html(x[0])
+                    }
+                    if (x[1] == "1") {
+                        $(".message-error").html(x[0])
                     }
                 },
             });

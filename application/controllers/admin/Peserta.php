@@ -396,7 +396,6 @@ class Peserta extends CI_Controller
                     $error .= 'Empty in the EMAIL column (Row ' . $i . ')<br>';
                 }
 
-                echo $error;
                 if (empty($error)) {
                     $code = $this->m_qualified->code($sheetData[$i]['3']);
                     if (isset($code->id_qua)) {
@@ -425,12 +424,21 @@ class Peserta extends CI_Controller
                         $data['update_date']    = "0000-00-00 00:00:00";
                         $data['soft_delete']    = "0";
                         $data["id_user"]        = $this->session->akun;
-                        $this->session->set_flashdata('notif', 'Participant has been added');
-                        $this->m_reg->save($data);
+                        // $this->session->set_flashdata('notif', 'Participant has been added');
+                        $uploads = $this->m_reg->save($data);
+                        if ($uploads) {
+                            $sukses = "Success to add participant (Excel Row  $i)";
+                            echo "<div class='alert alert-success'>$sukses</div>";
+                        }
                     }
                 } else {
-                    exit();
+                    echo "<div class='alert alert-danger'>$error</div>";
                 }
+            }
+            if (!empty($error)) {
+                echo ",0";
+            } elseif (!empty($sukses)) {
+                echo ",1";
             }
             // redirect('../admin/peserta/');
         }

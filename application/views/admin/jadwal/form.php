@@ -1,3 +1,9 @@
+<?php
+if (isset($row)) {
+    $start = explode(" ", $row->mulai);
+    $selesai = explode(" ", $row->selesai);
+}
+?>
 <div class="content-header justify-content-between">
     <div>
         <nav aria-label="breadcrumb">
@@ -64,10 +70,24 @@
                             <div class="col-sm-9">
                                 <div class="row">
                                     <div class="col-md mb-2">
-                                        <input required type="text" class="form-control" id="mulai" name="mulai" placeholder="start date" value="<?= (isset($row)) ? $row->mulai : date("Y-m-d H:i:s"); ?>">
+                                        <div class="row">
+                                            <div class="col">
+                                                <input required type="text" class="form-control" id="mulai" name="mulai" placeholder="start date" value="<?= (isset($row)) ? $start[0] : date("Y-m-d"); ?>">
+                                            </div>
+                                            <div class="col">
+                                                <input required type="time" class="form-control" id="jam_mulai" name="jam_mulai" placeholder="start time" value="<?= (isset($row)) ? $start[1] : false ?>">
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col-md mb-2">
-                                        <input required type="text" class="form-control" id="selesai" name="selesai" placeholder="end date" value="<?= (isset($row)) ? $row->selesai : date("Y-m-d H:i:s"); ?>">
+                                        <div class="row">
+                                            <div class="col">
+                                                <input required type="text" class="form-control" id="selesai" name="selesai" placeholder="end date" value="<?= (isset($row)) ? $selesai[0] : date("Y-m-d"); ?>">
+                                            </div>
+                                            <div class="col">
+                                                <input required type="time" class="form-control" id="jam_selesai" name="jam_selesai" placeholder="end time" value="<?= (isset($row)) ? $selesai[1] : false ?>">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div id="message-date"></div>
@@ -110,6 +130,25 @@
                                     <?php else : ?>
                                         <option value="actived">Actived</option>
                                         <option value="disabled">Disabled</option>
+                                    <?php endif; ?>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="level" class="col-sm-3 col-form-label font-weight-bold">Question Random</label>
+                            <div class="col-sm-9">
+                                <select required name="random" id="random" class="form-control">
+                                    <?php if (isset($row)) : ?>
+                                        <?php if ($row->random == "Y") : ?>
+                                            <option value="Y" selected>Random</option>
+                                            <option value="N">No</option>
+                                        <?php else : ?>
+                                            <option value="Y">Random</option>
+                                            <option value="N" selected>No</option>
+                                        <?php endif; ?>
+                                    <?php else : ?>
+                                        <option value="Y">Random</option>
+                                        <option value="N">No</option>
                                     <?php endif; ?>
                                 </select>
                             </div>
@@ -257,6 +296,7 @@
                             <div class="col-sm-9">
                                 <input type="number" required name="durasi" min="5" minlength="5" value="<?php if (isset($row)) echo $row->durasi ?>" id="durasi" class="form-control" placeholder="set duration record">
                                 <small>Duration in format second (5 second, 10 second etc)</small>
+                                <div class="error-upload"></div>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -315,10 +355,10 @@
     $(function() {
         'use strict'
         $('#mulai').datepicker({
-            dateFormat: "dd/mm/yy",
+            dateFormat: "yy-mm-dd",
         });
         $('#selesai').datepicker({
-            dateFormat: "dd/mm/yy",
+            dateFormat: "yy-mm-dd",
         });
 
         $("body").on('change', '#selesai', function(e) {
@@ -330,6 +370,24 @@
             } else {
                 $("#message-date").hide()
                 $("#btn-jadwal").prop("disabled", false);
+            }
+        });
+        $("body").on('keyup', '#durasi', function(e) {
+            var interval = $("#interval").val();
+            var durasi = $(this).val();
+            if (durasi >= interval) {
+                $(".error-upload").html(`<div class="alert alert-danger">Duration is greater than interval</div>`)
+            } else {
+                $(".error-upload").html(``)
+            }
+        });
+        $("body").on('keyup', '#interval', function(e) {
+            var interval = $(this).val();
+            var durasi = $("#durasi").val();
+            if (interval <= interval) {
+                $(".error-upload").html(`<div class="alert alert-danger">The upload interval is smaller than the duration</div>`)
+            } else {
+                $(".error-upload").html(``)
             }
         });
     });
